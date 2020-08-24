@@ -1,0 +1,9 @@
+[submodule "priv/etcd"]
+	path = priv/etcd
+	url = https://github.com/etcd-io/etcd.git
+[submodule "priv/googleapis"]
+	path = priv/googleapis
+	url = https://github.com/googleapis/googleapis.git
+[submodule "priv/protobuf"]
+	path = priv/protobuf
+	url = https://github.com/gogo/protobuf.git
