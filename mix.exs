@@ -7,7 +7,8 @@ defmodule Etcdv3.MixProject do
       version: "3.4.12",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
     ]
   end
 
@@ -22,8 +23,15 @@ defmodule Etcdv3.MixProject do
   defp deps do
     [
       {:grpc, github: "elixir-grpc/grpc"},
-      {:cowlib, "~> 2.9.0", override: true},
       {:gun, "~> 2.0.0", hex: :grpc_gun}
+    ]
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README*"],
+      licenses: ["Apache-2.0"],
+      links: %{"Github" => "https://github.com/jeffutter/etcdv3"}
     ]
   end
 end
